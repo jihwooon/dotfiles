@@ -12,3 +12,7 @@
 
 - 파일 목록 기능
 ![nVim-openFile](https://github.com/jihwooon/nVim-Ide/assets/68071599/cc13fba6-e6a3-4017-83cb-3e8b7089b932)
+
+- 파일 찾기 기능
+![nVim-fileSearch](https://github.com/jihwooon/nVim-Ide/assets/68071599/b5dd5f50-7260-42ee-b4b2-2bd45bdb633a)
+
