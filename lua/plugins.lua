@@ -64,9 +64,11 @@ packer.startup(function(use)
       "nvim-lua/plenary.nvim",
       "antoinemadec/FixCursorHold.nvim",
       'haydenmeade/neotest-jest',
+      'marilari88/neotest-vitest',
+      "vim-test/vim-test",
+      "nvim-neotest/neotest-vim-test",
     }
   }
 
-  use 'vim-test/vim-test'
 end)
 
