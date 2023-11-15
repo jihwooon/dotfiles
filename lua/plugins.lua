@@ -62,9 +62,11 @@ packer.startup(function(use)
     "nvim-neotest/neotest",
     requires = {
       "nvim-lua/plenary.nvim",
-      "antoinemadec/FixCursorHold.nvim"
+      "antoinemadec/FixCursorHold.nvim",
+      'haydenmeade/neotest-jest',
     }
   }
 
+  use 'vim-test/vim-test'
 end)
 
