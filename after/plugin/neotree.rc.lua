@@ -23,7 +23,7 @@ neotree.setup({
                 "toggle_node",
                 nowait = false, -- disable `nowait` if you have existing combos starting with this char that you want to use 
             },
-            ["<2-LeftMouse>"] = "open",
+            ["<c-o>"] = "open",
             ["<cr>"] = "open",
             ["<esc>"] = "cancel", -- close preview or floating neo-tree window
             ["P"] = { "toggle_preview", config = { use_float = true, use_image_nvim = true } },
@@ -73,4 +73,6 @@ neotree.setup({
           }
         },
 })
+
+vim.keymap.set('n', '<C-0>', '<Cmd>Neotree toggle<CR>')
 
