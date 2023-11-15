@@ -13,7 +13,7 @@ keymap.set('n', 'dw', 'vb"_d')
 -- 모두 선택 : ^a
 keymap.set('n', '<C-a>', 'gg<S-v>G')
 
---- 새 탭 : te
+--- 새 탭 : tb
 keymap.set('n', 'tb', ':tabedit<Return>', { silent = true})
 
 -- 화면 가로 분할 : sb
