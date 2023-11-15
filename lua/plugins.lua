@@ -57,5 +57,14 @@ packer.startup(function(use)
     "akinsho/toggleterm.nvim",
     config = true
   }
+
+  use {
+    "nvim-neotest/neotest",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim"
+    }
+  }
+
 end)
 
