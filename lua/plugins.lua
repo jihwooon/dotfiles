@@ -47,6 +47,7 @@ packer.startup(function(use)
   use 'williamboman/mason-lspconfig.nvim'
   use 'Pocco81/auto-save.nvim'
   use 'folke/tokyonight.nvim'
+  use "sindrets/diffview.nvim"
 
 end)
 
