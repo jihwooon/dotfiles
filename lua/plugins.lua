@@ -70,5 +70,18 @@ packer.startup(function(use)
     }
   }
 
+  use {
+    'mfussenegger/nvim-dap', -- debugger
+    requires = {
+      "Pocco81/DAPInstall.nvim",
+      "theHamsta/nvim-dap-virtual-text",
+      "rcarriga/nvim-dap-ui",
+      "nvim-telescope/telescope-dap.nvim",
+      { "jbyuki/one-small-step-for-vimkind", module = "osv" },
+    }
+  }
+
+  use "folke/which-key.nvim"
+
 end)
 
