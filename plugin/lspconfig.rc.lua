@@ -34,3 +34,7 @@ nvim_lsp.lua_ls.setup {
   }
 }
 
+nvim_lsp.terraformls.setup{
+  filetypes = { "terraform", "terraform-vars" },
+  cmd = { "terraform-ls", "serve" }
+}
