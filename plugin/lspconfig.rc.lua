@@ -34,3 +34,14 @@ nvim_lsp.lua_ls.setup {
   }
 }
 
+-- terraform --
+nvim_lsp.terraformls.setup{
+  filetypes = { "terraform", "terraform-vars" },
+  cmd = { "terraform-ls", "serve" }
+}
+
+nvim_lsp.tflint.setup {
+  filetypes = { "terraform" },
+  cmd = { "tflint", "--langserver" }
+}
+
