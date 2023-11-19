@@ -11,8 +11,15 @@ if not status then return end
     expr = false, -- use `expr` when creating keymaps
   }
 
-  local mappings = {
-    ["w"] = { "<cmd>update!<CR>", "Save" },
+whichkey.setup {
+    window = {
+    border = "single", -- none, single, double, shadow
+    position = "bottom", -- bottom, top
+  },
+}
+
+whichkey.register({
+    ["s"] = { "<cmd>update!<CR>", "Save" },
     ["q"] = { "<cmd>q!<CR>", "Quit" },
 
     b = {
@@ -21,7 +28,7 @@ if not status then return end
       D = { "<Cmd>%bd|e#|bd#<Cr>", "Delete all buffers" },
     },
 
-    z = {
+    p = {
       name = "Packer",
       c = { "<cmd>PackerCompile<cr>", "Compile" },
       i = { "<cmd>PackerInstall<cr>", "Install" },
@@ -34,16 +41,23 @@ if not status then return end
       name = "Git",
       s = { "<cmd>Neogit<CR>", "Status" },
     },
-  }
 
-whichkey.setup {
-    window = {
-    border = "single", -- none, single, double, shadow
-    position = "bottom", -- bottom, top
-  },
-}
+    f = {
+      name = "File",
+      f = {'<cmd>lua require("telescope.builtin").find_files({ path = "%:p:h", cwd = telescope_buffer_dir(), respect_git_ignore = true, hidden = true, grouped = true, previewer = true, initial_mode = "normal", layout_config = { height = 40 } })<cr>',"Find file"},
+      b = {'<cmd>lua require("telescope.builtin").buffers()<cr>', "Buffers"},
+      g = {'<cmd>lua require("telescope.builtin").live_grep()<cr>', 'Live grep'},
+      s = {':Telescope file_browser path=%:p:h select_buffer=true<CR>', 'File browser'},
+    },
 
-whichkey.register(mappings,opts)
+    t = {
+      name = "Test",
+      s = {'<cmd>lua require("neotest").summary.toggle()<cr>', 'test Summary'},
+      w = {'<cmd>lua require("neotest").run.run({ jestCommand = "npm run test -- --watch " })<cr>', 'test Run'},
+      S = {'<cmd>lua require("neotest").run.stop()<cr>','test Stop'},
+      n = {'<cmd>lua require("neotest").run.run(vim.fn.expand("%"))<cr>','test All'},
+    }
+  },opts)
 
-vim.api.nvim_set_keymap("", "<Space>", ":WhichKey", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("", "<Space><Space>", ":WhichKey", { noremap = true, silent = true })
 

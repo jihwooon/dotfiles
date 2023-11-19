@@ -34,3 +34,6 @@ keymap.set("n", "<C-w><right>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
+-- Tab Close
+keymap.set("n", "<S-w>","<cmd>bd<CR>", { desc = 'Close Tab'})
+

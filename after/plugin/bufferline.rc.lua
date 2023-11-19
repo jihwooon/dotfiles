@@ -82,5 +82,5 @@ bufferline.setup {
 
 vim.api.nvim_set_keymap('n', '<Tab>', '<cmd>BufferLineCycleNext<cr>', {})
 vim.api.nvim_set_keymap('n', '<S-Tab>', '<cmd>BufferLineCyclePrev<cr>', {})
-vim.api.nvim_set_keymap('n', '<S-R>', '<cmd>BufferLinePickClose<cr>',{})
+vim.api.nvim_set_keymap('n', '<Leader>c', '<cmd>BufferLinePickClose<cr>',{})
 
