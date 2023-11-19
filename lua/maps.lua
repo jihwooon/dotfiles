@@ -37,3 +37,9 @@ keymap.set("n", "<C-w><down>", "<C-w>-")
 -- Tab Close
 keymap.set("n", "<S-w>","<cmd>bd<CR>", { desc = 'Close Tab'})
 
+-- LSP(Language Server Portoco) 
+vim.keymap.set('n', '<s-b>', vim.lsp.buf.definition, { desc = "Go to Definition" })
+vim.keymap.set('n', '<s-k>', vim.lsp.buf.hover, {desc = "show code hover"})
+vim.keymap.set('n', '<s-r>', vim.lsp.buf.references, {desc = "show refrence"})
+vim.keymap.set('n', '<s-l>', function() vim.lsp.buf.format { async = true } end)
+vim.keymap.set('n', '<s-Enter>',vim.lsp.buf.code_action, {desc = "code action"})
