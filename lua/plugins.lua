@@ -7,6 +7,7 @@ end
 vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
+  use 'goolord/alpha-nvim' --background
   use 'wbthomason/packer.nvim'
   use {
     'svrana/neosolarized.nvim',
@@ -50,11 +51,12 @@ packer.startup(function(use)
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
   use 'Pocco81/auto-save.nvim'
-  use {
-    'folke/tokyonight.nvim',
-    lazy = true,
-    opts = { style = "moon"}
-  }
+
+  use 'mofiqul/dracula.nvim'
+  use 'edeneast/nightfox.nvim'
+  use 'folke/tokyonight.nvim'
+
+  use 'christianchiarulli/nvcode-color-schemes.vim' -- NVCode Colorscheme
 
   use "sindrets/diffview.nvim"
   use {
@@ -93,5 +95,6 @@ packer.startup(function(use)
     end,
   }
 
+  use "norcalli/nvim-colorizer.lua"
 end)
 

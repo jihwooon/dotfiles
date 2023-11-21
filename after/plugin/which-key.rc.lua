@@ -19,6 +19,7 @@ whichkey.setup {
 }
 
 whichkey.register({
+    ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
     ["s"] = { "<cmd>update!<CR>", "Save" },
     ["q"] = { "<cmd>q!<CR>", "Quit" },
 
