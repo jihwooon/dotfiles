@@ -56,6 +56,8 @@ packer.startup(function(use)
   use 'edeneast/nightfox.nvim'
   use 'folke/tokyonight.nvim'
 
+  use 'christianchiarulli/nvcode-color-schemes.vim' -- NVCode Colorscheme
+
   use "sindrets/diffview.nvim"
   use {
     "akinsho/toggleterm.nvim",
