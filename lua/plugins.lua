@@ -51,11 +51,10 @@ packer.startup(function(use)
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
   use 'Pocco81/auto-save.nvim'
-  use {
-    'folke/tokyonight.nvim',
-    lazy = true,
-    opts = { style = "moon"}
-  }
+
+  use 'mofiqul/dracula.nvim'
+  use 'edeneast/nightfox.nvim'
+  use 'folke/tokyonight.nvim'
 
   use "sindrets/diffview.nvim"
   use {
@@ -94,5 +93,6 @@ packer.startup(function(use)
     end,
   }
 
+  use "norcalli/nvim-colorizer.lua"
 end)
 
