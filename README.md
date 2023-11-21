@@ -7,7 +7,8 @@
 </p>
 
 ### main
-- 개발 시작 환경 
+- 개발 시작 환경
+![메인화면](https://github.com/jihwooon/nVim-Ide/assets/68071599/66ffcf7c-641b-4a9c-a1ef-6288a7490085)
 ![환경구성](https://github.com/jihwooon/nVim-Ide/assets/68071599/4c3ca1a5-1101-4371-a51e-d1e8eb3d1d23)
 
 
