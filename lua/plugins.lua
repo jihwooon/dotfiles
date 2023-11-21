@@ -7,6 +7,7 @@ end
 vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
+  use 'goolord/alpha-nvim' --background
   use 'wbthomason/packer.nvim'
   use {
     'svrana/neosolarized.nvim',
