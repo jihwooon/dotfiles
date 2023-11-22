@@ -12,9 +12,10 @@ local on_attach = function(client, bufnr)
   end
 end
 
+-- tsserver --
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
-  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+  filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" },
   cmd = { "typescript-language-server", "--stdio" }
 }
 
@@ -34,8 +35,25 @@ nvim_lsp.lua_ls.setup {
   }
 }
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+nvim_lsp.html.setup {
+  capabilities = capabilities,
+  cmd = { "vscode-html-language-server", "--stdio" },
+  filetypes = { "html" },
+  init_options = {
+    configurationSection = { "html", "css", "javascript" },
+    embeddedLanguages = {
+      css = true,
+      javascript = true
+    },
+    provideFormatter = true
+  }
+}
+
 -- terraform --
-nvim_lsp.terraformls.setup{
+nvim_lsp.terraformls.setup {
   filetypes = { "terraform", "terraform-vars" },
   cmd = { "terraform-ls", "serve" }
 }
@@ -44,4 +62,3 @@ nvim_lsp.tflint.setup {
   filetypes = { "terraform" },
   cmd = { "tflint", "--langserver" }
 }
-
