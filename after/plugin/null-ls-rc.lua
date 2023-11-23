@@ -6,7 +6,7 @@ null_ls.setup {
     if client.server_capabilities.documentFormattingProvider then
       vim.api.nvim_command [[augroup Format]]
       vim.api.nvim_command [[autocmd! * <buffer>]]
-      vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formattion_seq_sync()]]
+      vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formattion_seq_sync(nil, 10000)]]
       vim.api.nvim_command [[augroup END]]
     end
   end,
@@ -14,6 +14,9 @@ null_ls.setup {
     null_ls.builtins.diagnostics.eslint_d.with({
       diagnostics_format = "[eslint] #{m}\n(#{c})"
     }),
-    null_ls.builtins.diagnostics.fish,
+    null_ls.builtins.diagnostics.zsh,
+    null_ls.builtins.completion.spell.with({
+      diagnostics_format = "[#{c}] #{m}\n(#{s})"
+    }),
   }
 }
