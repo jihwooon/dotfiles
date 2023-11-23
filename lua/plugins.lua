@@ -7,6 +7,7 @@ end
 vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
+  use 'soulis-1256/hoverhints.nvim'
   use 'goolord/alpha-nvim' --background
   use 'wbthomason/packer.nvim'
   use {
