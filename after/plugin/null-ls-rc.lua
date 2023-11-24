@@ -6,7 +6,7 @@ null_ls.setup {
     if client.server_capabilities.documentFormattingProvider then
       vim.api.nvim_command [[augroup Format]]
       vim.api.nvim_command [[autocmd! * <buffer>]]
-      vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formattion_seq_sync(nil, 10000)]]
+      vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 1500)]]
       vim.api.nvim_command [[augroup END]]
     end
   end,
